@@ -1,3 +1,5 @@
+import 'dart:io';
+
 // Dart requires Main function explicily
 void main() {
   hello();
@@ -14,11 +16,22 @@ void simpleHello(String name) {
   print("Hello $name");
 }
 
-void hello() {
-  // List implements all array methods. use List<T> for typing it
-  List<String> namesList = ["a", "b", "c"];
+// List implements all array methods. use List<T> for typing it
+List<String> namesList = ["a", "b", "c"];
 
+void listHello(List<String> namesList) {
   for (var name in namesList) {
-    print(name);
+    print("Hello $name");
   }
+}
+
+void ioHello() {
+  stdout.writeln("Waiting for user input!");
+  // readLineSync can return null so we need to set ? on the type
+  String? input = stdin.readLineSync(); // blocking reading operation
+  print('Hello $input');
+}
+
+void hello() {
+  ioHello();
 }
