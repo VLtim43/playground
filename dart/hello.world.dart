@@ -3,13 +3,10 @@ import 'dart:io';
 // Dart is an object-oriented language, and supports single inheritance
 // In Dart, everything is an object, and every object is an instance of a class. There are no primitives, so even numbers are objects
 // Dart is typed
-// Dart supports top-level functions and declarations, but not statments
-
+// Dart supports top-level(outside of methods) functions and declarations, but not statments
 // Dart requires Main function
-void main() {
-  // var keyword used for infered typed variables
-  var unTypedName = "infered typed World!";
 
+void main() {
   // when typing variables just put the type
   String typedName = "typed World!";
 
